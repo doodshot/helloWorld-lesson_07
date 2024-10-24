@@ -1,39 +1,23 @@
 import { Image, Text, View } from "react-native";
-import { Card } from "@/api/data.mock";
+import { ToDo } from "@/api/data.mock";
 import { styles } from "@/components/molecules/cardComponent/cardComponent.styles";
+import React from "react";
+import { ButtonComponent } from "@/components/atoms/button/button.atom";
 
-export const CardComponent = ({
+export const TodoComponenet = ({
+  id,
   title,
-  subTitle,
-  backgroundColor,
-  image,
-}: Card) => {
+  descr
+}: ToDo) => {
   return (
-    <View
-      style={[
-        styles.container,
-        {
-          backgroundColor: backgroundColor ?? "aqua",
-        },
-      ]}
-    >
-      {/* IMAGE */}
-      <View style={styles.containerImage}>
-        <Image
-          source={image ?? require("../../../assets/images/logo.jpg")}
-          style={styles.image}
-        />
+    <View style={styles.container}>
+      <View style={styles.containerBtn}>
+        <ButtonComponent onPress={function (): void {
+          throw new Error("Function not implemented.");
+        } } title={""}/>
+      <Text style={styles.title}>{title}</Text>
       </View>
-      {/* IMAGE */}
-
-      {/* DESCRIPTION */}
-      <View style={styles.containerDescription}>
-        <Text style={styles.title}>{title ?? "Titolo mancante"}</Text>
-        <View style={styles.containerSubtTitle}>
-          <Text>{subTitle ?? "Descrizione mancante"}</Text>
-        </View>
-      </View>
-      {/* DESCRIPTION */}
+      <Text>{descr}</Text>
     </View>
   );
 };

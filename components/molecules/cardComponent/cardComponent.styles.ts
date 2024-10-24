@@ -2,32 +2,18 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    height: 400,
-    borderRadius: 15,
-    flexDirection: "row",
-    backgroundColor: "aqua",
-  },
-  containerImage: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  image: {
-    width: 130,
-    height: 130,
-    borderRadius: 130 / 2,
-    resizeMode: "cover",
-  },
-  containerDescription: {
-    flex: 1,
-    justifyContent: "center",
+   padding: 10,
+   display: "flex",
+   justifyContent: "flex-start",
+   alignItems: "flex-start",
   },
   title: {
-    fontSize: 20,
-    fontWeight: "800",
+    fontSize: 16,
+    fontFamily: "Arial"
   },
-  containerSubtTitle: {
-    flex: 1,
-    justifyContent: "center",
-  },
+  containerBtn: {
+    flexDirection: "row",
+    padding: 10
+  }
+  
 });

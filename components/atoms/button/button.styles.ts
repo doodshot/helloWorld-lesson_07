@@ -3,10 +3,20 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     marginHorizontal: 16,
-    height: 55,
-    backgroundColor: "#0ba6ff",
+    borderWidth: 2,
+    width: 20,
+    height: 20,
     borderRadius: 10,
-    justifyContent: "center",
-    alignItems: "center",
   },
+  title: {
+    fontSize: 24,
+    textAlign: "center",
+    color: "blue"
+  },
+  addBtn: {
+    padding: 16,
+    borderWidth: 2,
+    borderRadius: 10,
+    borderColor: "blue",
+  }
 });

@@ -21,6 +21,17 @@ export default function Index() {
   const [todos, setTodos] = useState<ToDo[]>([]);
 
   const addTask = () => {
+      setTodos((prevState) => {
+          return [
+              ...prevState,
+              {
+                  id: new Date().valueOf(),
+                  title: titleTodo,
+                  isCompleted: false,
+              },
+          ];
+      });
+      setTitleTodo(""); // reetto quello che scrive l'utente
   }
  
   return (

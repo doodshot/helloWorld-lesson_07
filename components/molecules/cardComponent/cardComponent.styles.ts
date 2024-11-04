@@ -14,6 +14,18 @@ export const styles = StyleSheet.create({
   containerBtn: {
     flexDirection: "row",
     padding: 10
-  }
+  }, 
+  button: {
+    padding: 10,
+    backgroundColor: "lightgray",
+    borderRadius: 5,
+  },
+  buttonPressed: {
+    backgroundColor: "green",
+  },
+  buttonText: {
+    color: "white",
+    fontWeight: "bold",
+  },
   
 });
